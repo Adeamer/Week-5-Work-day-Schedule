@@ -25,12 +25,27 @@ textarea {
   white-space: pre-wrap;
 }
 
-
-
 .time-block {
   text-align: center;
   border-radius: 15px;
-  max-width: 100vw;
+  margin: 0;
+}
+
+#time {
+  text-align: right;
+  position: absolute;
+  height: 75px;
+  width: 86px;
+  vertical-align: middle;
+  padding-top: 25px;
+  border-bottom: 2px dotted black;
+  border-right:  2px dotted black;
+  border-top:   2px dotted black;
+}
+
+#time-block-input {
+  height: 75px;
+  width: 60vw
 }
 
 .row {
