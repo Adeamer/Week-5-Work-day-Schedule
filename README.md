@@ -1,7 +1,7 @@
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
-
+**This is done by adding moment code to display the current date in its documentated format.**
 
 WHEN I scroll down
 THEN I am presented with timeblocks for standard business hours

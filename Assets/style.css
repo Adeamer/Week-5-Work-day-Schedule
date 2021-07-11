@@ -35,15 +35,16 @@ textarea {
   text-align: right;
   position: absolute;
   height: 75px;
-  width: 86px;
+  width: 95px;
   vertical-align: middle;
   padding-top: 25px;
   border-bottom: 2px dotted black;
   border-right:  2px dotted black;
   border-top:   2px dotted black;
+  font-weight: bold;
 }
 
-#time-block-input {
+.time-block-input {
   height: 75px;
   width: 60vw
 }
@@ -81,6 +82,9 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  position:absolute;
+  height: 75px;
+  width: 80px;
 }
 
 #saveBtn i:hover {
