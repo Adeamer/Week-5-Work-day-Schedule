@@ -14,8 +14,12 @@ $(document.querySelector(".future"));
 
 // Compares row id to current hour and sets color accordingly
 for(var i=0; i < inputBoxes.length; i++) {
-  
+  var storageItem = getSavedValue(inputBoxes[i]);
     
+    if(storageItem !== false){
+      inputBoxes[i].value= storageItem;
+    }
+
    if (currentHour === inputBoxes[i]) {
      console.log(inputBoxes[i]);
        inputBoxes[i].getAttribute('data-time')
@@ -42,10 +46,16 @@ for(var i=0; i < inputBoxes.length; i++) {
 };
 
 //when button is clicked then the it will save the input text to local storage and parist once the page is refreshed.
-var saveBtn = document.querySelectorAll("saveBtn");
 
-saveBtn.onclick = function(){
-  //var inputValue = inputBoxes.value.trim();
-  console.log(inputValue);
-  localStorage.setItem("Event", inputBoxes.textContent);
-};
+
+function handleSave(key){
+  var timeValue = document.getElementById(key).value
+  localStorage.setItem(key,timeValue);
+}
+
+function getSavedValue(string){
+  if (!localStorage.getItem(string.id)) {
+      return false;
+  }
+  return localStorage.getItem(string.id);
+}
