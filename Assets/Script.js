@@ -58,4 +58,4 @@ function getSavedValue(string){
       return false;
   }
   return localStorage.getItem(string.id);
-}
+};
